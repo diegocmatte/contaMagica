@@ -55,12 +55,12 @@ public class ContaMagica {
         } else {
             if (getSaldo() < 50000) {
                 setSaldo(valor + saldo);
-                if(getSaldo() >= 50000){
+                if (getSaldo() >= 50000) {
                     setCategoria(GOLD);
                 }
             } else if (getSaldo() < 200000) {
                 setSaldo(valor + saldo + (valor * 0.01));
-                if(getSaldo()>=200000){
+                if (getSaldo() >= 200000) {
                     setCategoria(PLATINUM);
                 }
             } else {
@@ -73,7 +73,24 @@ public class ContaMagica {
         if (valor > getSaldo()) {
             System.out.println("Valor informado maior que o saldo");
         } else {
-            setSaldo(saldo - valor);
+            switch (getCategoria()) {
+                case PLATINUM:
+                    setSaldo(saldo - valor);
+                    if (getSaldo() < 100000) {
+                        setCategoria(GOLD);
+                    }
+                    break;
+                case GOLD:
+                    setSaldo(saldo - valor);
+                    if (getSaldo() < 25000) {
+                        setCategoria(SILVER);
+                    }
+                    break;
+                case SILVER:
+                    setSaldo(saldo - valor);
+                    break;
+            }
+            /*
             if (getSaldo() < 25000) {
                 setCategoria(SILVER);
             } else if (getSaldo() < 100000) {
@@ -81,6 +98,8 @@ public class ContaMagica {
             } else {
                 setCategoria(PLATINUM);
             }
+        }
+             */
         }
     }
 }
