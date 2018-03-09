@@ -36,7 +36,7 @@ public class ContaMagica {
         this.saldo = saldo;
     }
 
-    public Categoria getCategoria() {
+    public final Categoria getCategoria() {
         if (getSaldo() < 50000) {
             return SILVER;
         } else if (getSaldo() < 200000) {

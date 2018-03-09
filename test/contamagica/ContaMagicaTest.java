@@ -20,26 +20,6 @@ import static org.junit.Assert.*;
  * @author Diego Cansi Matte <diego.cansi at ibm.com>
  */
 public class ContaMagicaTest {
-    
-    public ContaMagicaTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
     /**
      * Test of getSaldo method, of class ContaMagica.
      */
@@ -76,7 +56,7 @@ public class ContaMagicaTest {
     public void testGetCategoria() {
         System.out.println("getCategoria");
         ContaMagica instance = new ContaMagica("joao");
-        instance.setSaldo(100000);
+        instance.setSaldo(110000);
         ContaMagica.Categoria expResult = GOLD;
         ContaMagica.Categoria result = instance.getCategoria();
         assertEquals(expResult, result);
