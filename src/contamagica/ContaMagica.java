@@ -74,9 +74,9 @@ public class ContaMagica {
             System.out.println("Valor informado maior que o saldo");
         } else {
             setSaldo(saldo - valor);
-            if (getSaldo() < 50000) {
+            if (getSaldo() < 25000) {
                 setCategoria(SILVER);
-            } else if (getSaldo() < 200000) {
+            } else if (getSaldo() < 100000) {
                 setCategoria(GOLD);
             } else {
                 setCategoria(PLATINUM);
