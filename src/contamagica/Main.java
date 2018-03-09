@@ -19,8 +19,8 @@ public class Main {
         ContaMagica cm = new ContaMagica("joao");
         cm.deposito(200000);
         System.out.println(cm.getCategoria()); //platinum
-        cm.retirada(50000);
-        System.out.println(cm.getCategoria()); //platinum
+        cm.retirada(180000);
+        System.out.println(cm.getCategoria()); //gold
         
     }
     
