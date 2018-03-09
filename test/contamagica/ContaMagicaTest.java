@@ -5,6 +5,7 @@
  */
 package contamagica;
 
+import static contamagica.ContaMagica.Categoria.GOLD;
 import static contamagica.ContaMagica.Categoria.PLATINUM;
 import static contamagica.ContaMagica.Categoria.SILVER;
 import org.junit.After;
@@ -75,8 +76,8 @@ public class ContaMagicaTest {
     public void testGetCategoria() {
         System.out.println("getCategoria");
         ContaMagica instance = new ContaMagica("joao");
-        instance.setSaldo(1000);
-        ContaMagica.Categoria expResult = SILVER;
+        instance.setSaldo(100000);
+        ContaMagica.Categoria expResult = GOLD;
         ContaMagica.Categoria result = instance.getCategoria();
         assertEquals(expResult, result);
         System.out.println(instance.getCategoria()+"\n");

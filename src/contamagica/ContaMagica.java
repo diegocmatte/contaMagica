@@ -15,12 +15,13 @@ import static contamagica.ContaMagica.Categoria.SILVER;
  */
 public class ContaMagica {
 
+    private Categoria categoria;
+
     public enum Categoria {
         SILVER, GOLD, PLATINUM;
     }
     private String nome;
     private double saldo;
-    private Categoria categoria;
 
     public ContaMagica(String nome) {
         this.nome = nome;
