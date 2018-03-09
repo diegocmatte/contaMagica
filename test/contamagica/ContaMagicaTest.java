@@ -118,10 +118,11 @@ public class ContaMagicaTest {
     @Test
     public void testRetirada() {
         System.out.println("retirada");
-        double valor = 0.0;
+        double valor = 100000.0;
         ContaMagica instance = new ContaMagica("joao");
         instance.setSaldo(1000);
         instance.retirada(valor);
+        System.out.println(instance.getSaldo()+"\n");
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
