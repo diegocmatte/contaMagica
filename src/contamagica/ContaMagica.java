@@ -45,7 +45,6 @@ public class ContaMagica {
             return PLATINUM;
         }
     }
-    
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
@@ -100,7 +99,6 @@ public class ContaMagica {
             } else {
                 setCategoria(PLATINUM);
             }
-        }
              */
         }
     }
