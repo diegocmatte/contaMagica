@@ -17,11 +17,12 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         ContaMagica cm = new ContaMagica("joao");
+        cm.deposito(20000);
+        System.out.println(cm.getCategoria()); //silver
+        cm.deposito(80000);
+        System.out.println(cm.getCategoria()); //gold
         cm.deposito(200000);
         System.out.println(cm.getCategoria()); //platinum
-        cm.retirada(180000);
-        System.out.println(cm.getCategoria()); //gold
-        
     }
     
 }
