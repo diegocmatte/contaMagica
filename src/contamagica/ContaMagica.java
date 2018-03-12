@@ -36,7 +36,7 @@ public class ContaMagica {
         this.saldo = saldo;
     }
 
-    public final Categoria getCategoria() {
+    public Categoria getCategoria() {
         if (getSaldo() < 50000) {
             return SILVER;
         } else if (getSaldo() < 200000) {
@@ -45,6 +45,7 @@ public class ContaMagica {
             return PLATINUM;
         }
     }
+    
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
