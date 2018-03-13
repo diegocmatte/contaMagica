@@ -16,13 +16,17 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("--- Testando deposito ---");
         ContaMagica cm = new ContaMagica("joao");
         cm.deposito(20000);
-        System.out.println(cm.getCategoria()); //silver
+        System.out.println("Saldo: "+cm.getSaldo()+" Categoria: "+cm.getCategoria()); //silver
         cm.deposito(80000);
-        System.out.println(cm.getCategoria()); //gold
+        System.out.println("Saldo: "+cm.getSaldo()+" Categoria: "+cm.getCategoria());
         cm.deposito(200000);
-        System.out.println(cm.getCategoria()); //platinum
+        System.out.println("Saldo: "+cm.getSaldo()+" Categoria: "+cm.getCategoria());
+        System.out.println("--- Fim teste deposito ---");
+        System.out.println("--- Testando retirada ---");
+        
     }
     
 }
