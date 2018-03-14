@@ -52,4 +52,22 @@ public class ContaMagicaBigDecimal {
         this.categoria = categoria;
     }
 
+    public void deposito(BigDecimal valor) {
+        if (valor.doubleValue() <= 0) {
+            System.out.println("Valor informado menor/igual a zero.");
+        } else {
+            BigDecimal total = new BigDecimal("0.0");
+            if (getSaldo().doubleValue() >= 200000) {
+                //getSaldo().add(valor);
+                total = total.add(valor);
+                setSaldo(total.add(getSaldo()));
+            } else if (getSaldo().doubleValue() >= 50000) {
+                total = total.add(valor);
+                setSaldo(total.add(getSaldo()));
+            } else {
+                total = total.add(valor);
+                setSaldo(total.add(getSaldo()));
+            }
+        }
+    }
 }
