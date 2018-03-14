@@ -26,6 +26,7 @@ public class ContaMagica {
     public ContaMagica(String nome) {
         this.nome = nome;
         this.saldo = 0;
+        this.categoria = SILVER;
     }
 
     public double getSaldo() {
@@ -54,18 +55,38 @@ public class ContaMagica {
         if (valor <= 0) {
             System.out.println("Valor informado menor/igual a zero.");
         } else {
-            if (getSaldo() < 50000) {
-                setSaldo(valor + saldo);
-                if (getSaldo() >= 50000) {
-                    setCategoria(GOLD);
-                }
-            } else if (getSaldo() < 200000) {
-                setSaldo(valor + saldo + (valor * 0.01));
-                if (getSaldo() >= 200000) {
-                    setCategoria(PLATINUM);
-                }
+            /*
+            double total;
+            switch (getCategoria()) {
+                case PLATINUM:
+                    total = getSaldo() + valor + (valor * 0.025);
+                    setSaldo(total);
+                    break;
+                case GOLD:
+                    total = (valor * 0.01);
+                    setSaldo(total);
+                    if (getSaldo() >= 200000) {
+                        setCategoria(PLATINUM);
+                    }
+                    break;
+                case SILVER:
+                    total = valor + getSaldo();
+                    setSaldo(total);
+                    if (getSaldo() >= 50000) {
+                        setCategoria(GOLD);
+                    }
+                    break;
+            } */
+            double total;
+            if (getSaldo() >= 200000) {
+                total = valor + getSaldo() + (valor * 0.25);
+                setSaldo(total);
+            } else if (getSaldo() >= 50000) {
+                total = valor + getSaldo() + (valor * 0.01);
+                setSaldo(total);
             } else {
-                setSaldo(valor + saldo + (valor * 0.025));
+                total = valor + getSaldo();
+                setSaldo(total);
             }
         }
     }

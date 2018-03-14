@@ -44,6 +44,7 @@ public class ContaMagicaTest {
         double saldo = 0.0;
         ContaMagica instance = new ContaMagica("joao");
         instance.setSaldo(saldo);
+        assertEquals(instance.getSaldo(), saldo, 0.0);
         System.out.println(instance.getSaldo()+"\n");
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -75,6 +76,7 @@ public class ContaMagicaTest {
         ContaMagica instance = new ContaMagica("joao");
         instance.setSaldo(20000000);
         instance.setCategoria(categoria);
+        assertEquals(instance.getCategoria(), categoria);
         System.out.println(instance.getCategoria()+"\n");
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -86,9 +88,11 @@ public class ContaMagicaTest {
     @Test
     public void testDeposito() {
         System.out.println("deposito");
-        double valor = 0.0;
+        double valor = 1000.0;
         ContaMagica instance = new ContaMagica("joao");
         instance.deposito(valor);
+        assertEquals(1000.0, instance.getSaldo(),0.0);
+        System.out.println();
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -99,10 +103,11 @@ public class ContaMagicaTest {
     @Test
     public void testRetirada() {
         System.out.println("retirada");
-        double valor = 100000.0;
+        double valor = 1000;
         ContaMagica instance = new ContaMagica("joao");
-        instance.setSaldo(1000);
+        instance.setSaldo(10000);
         instance.retirada(valor);
+        assertEquals(9000.0, instance.getSaldo(), 0.0);
         System.out.println(instance.getSaldo()+"\n");
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
