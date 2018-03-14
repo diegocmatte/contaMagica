@@ -29,6 +29,10 @@ public class ContaMagica {
         this.categoria = SILVER;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public double getSaldo() {
         return saldo;
     }

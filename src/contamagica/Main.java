@@ -16,8 +16,10 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         System.out.println("--- Testando deposito ---");
-        ContaMagica cm = new ContaMagica("joao");
+        ContaMagica cm = new ContaMagica("Joao");
+        System.out.println(cm.getNome());
         cm.setSaldo(20000);
         System.out.println("Saldo: "+cm.getSaldo()+" | Categoria: "+cm.getCategoria()); //silver
         cm.deposito(100000);
@@ -26,8 +28,10 @@ public class Main {
         cm.deposito(200000);
         System.out.println("Saldo: "+cm.getSaldo()+" | Categoria: "+cm.getCategoria()); //platinum
         System.out.println("--- Fim teste deposito ---\n");
+        
         System.out.println("--- Testando retirada ---");
-        ContaMagica cm1 = new ContaMagica("pedro");
+        ContaMagica cm1 = new ContaMagica("Pedro");
+        System.out.println(cm1.getNome());
         cm1.deposito(200000);
         System.out.println("Saldo: "+cm1.getSaldo()+" | Categoria: "+cm1.getCategoria()); //platinum
         cm1.retirada(180000);
